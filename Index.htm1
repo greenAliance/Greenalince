@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenAliance - Yard Care Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f9f4;
+      color: #2d4a2d;
+    }
+    header {
+      background: #2d6a2d;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+    }
+    main {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2d6a2d;
+      border-bottom: 2px solid #2d6a2d;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 1.1em;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      background: #2d6a2d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #245224;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #2d6a2d;
+      color: white;
+      font-size: 0.9em;
+    }
+    .deal {
+      background: #d2f0d2;
+      padding: 15px;
+      border: 2px solid #2d6a2d;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: 700;
+      color: #1f4d1f;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>GreenAliance</h1>
+  <p>West Side Cleveland | Mobile Yard Care | Grass & All Yard Services</p>
+</header>
+
+<main>
+  <section>
+    <h2>Our Services</h2>
+    <p>We handle everything yard-related — from grass cutting to full yard maintenance. Mobile and reliable with great prices all Spring, Summer, and Fall.</p>
+    <div class="deal">
+      🌞 <strong>Summer Special:</strong> Get 1 cut every 2 weeks at <em>20% off!</em>
+    </div>
+  </section>
+
+  <section>
+    <h2>Book & Schedule</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="address">Service Address</label>
+      <textarea id="address" name="address" rows="2" required></textarea>
+
+      <label for="service">Service Requested</label>
+      <textarea id="service" name="service" rows="3" placeholder="What do you want done?" required></textarea>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Imran Ali — Text only please: <strong>216-527-9578</strong></p>
+    <p>Email us at <a href="mailto:GreenAliance.cle@gmail.com">GreenAliance.cle@gmail.com</a> for questions or direct booking.</p>
+  </section>
+</main>
+
+<footer>
+  © 2025 GreenAliance — West Side Cleveland, OH
+</footer>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value,
+      address: this.address.value,
+      service: this.service.value,
+      date: this.date.value
+    };
+
+    alert(`Thanks, ${formData.name}! Your request has been received. We will send an estimate the same day.`);
+
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
